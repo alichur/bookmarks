@@ -1,0 +1,61 @@
+/*Won't work in many old browsers https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables*/
+
+:root {
+  --primary: #55acee;
+  --secondary: #1b326e;
+  --extra: #ed563c;
+  --canvas: #f5f8fa;
+}
+
+html {
+  background-color: var( --canvas);
+}
+
+
+/*https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties*/
+
+.container, .container-secondary {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.container div, .container-secondary div, a {
+  border-radius: 5%;
+}
+
+.container div, .container-secondary div {
+  text-align: center;
+  height: 6em;
+  width: 8em;
+  vertical-align: center;
+  margin: 2em 2em 2em 2em;
+  border: 0px solid transparent;
+}
+
+
+/*a elements expand to fill their containing divs to emulate a clickable div with no js */
+
+a, a:visited {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 1em;
+  background-color: var(--primary);
+  border: 2px solid transparent;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+.container-secondary .tool, .container-secondary .test {
+  height: 4em;
+  width: 6em;
+}
+
+.container-secondary .tool a, .container-secondary .test a {
+  background-color: var(--extra);
+  color: var(--secondary);
+}
